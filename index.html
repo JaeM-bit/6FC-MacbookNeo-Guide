@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salisbury 6th Form College – MacBook & Microsoft 365</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.55;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .intro {
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #0f172a;
+      color: white;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .answer {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .answer.active {
+      display: block;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    a {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <h1>Salisbury 6th Form College</h1>
+  <p class="intro">Choose one of the three topics below.</p>
+
+  <div class="buttons">
+    <button onclick="showAnswer('answer1')">MacBook & Microsoft 365</button>
+    <button onclick="showAnswer('answer2')">S6C Compatibility</button>
+    <button onclick="showAnswer('answer3')">Biology, Psychology & PE</button>
+    <button onclick="showAnswer('answer4')">Microsoft 365 Install Steps</button>
+  </div>
+
+  <section id="answer1" class="answer">
+    <h2>MacBook & Microsoft 365</h2>
+    <p>If by <strong>MacBook Neo</strong> you mean the new MacBook model, Microsoft 365 applications can be installed normally on it. Microsoft 365 supports current Macs, including Apple-silicon Macs.</p>
+    <p>The main point is the type of student Microsoft 365 licence provided by the school or college. Some education licences provide only browser versions of Word, Excel and PowerPoint, while others include the full desktop applications.</p>
+    <p>To install Microsoft 365, sign in at Microsoft 365 using the student's college email address, look for <strong>Install apps</strong>, download the Microsoft 365 installer, install it, then open Word or Excel and sign in again with the student account to activate it.</p>
+    <p>If there is no <strong>Install apps</strong> option, the student may have a web-only licence.</p>
+  </section>
+
+  <section id="answer2" class="answer">
+    <h2>Salisbury 6th Form College Compatibility</h2>
+    <p>Salisbury 6th Form College's current BYOD guidance says that students are provided with free Google Workspace and do not need to purchase Microsoft Office.</p>
+    <p>The college also states that it does <strong>not recommend Apple laptops or iPads</strong> because they are not fully compatible with all college software.</p>
+    <p>For most students, the college recommends a Chromebook, while some specialist subjects are better suited to Windows laptops.</p>
+    <p>This does not mean a MacBook cannot be used, but it is worth checking whether the student's subjects require any Windows-only software.</p>
+  </section>
+
+  <section id="answer3" class="answer">
+    <h2>Biology, Psychology & Physical Education</h2>
+    <p>For <strong>Biology, Psychology and A-level Physical Education</strong>, there is no obvious subject-specific reason why a MacBook would be unsuitable.</p>
+    <p>The specialist computer requirements highlighted by S6C mainly concern subjects such as Software Design & Development, Photography and Media. Biology, Psychology and PE are not listed among those specialist requirements.</p>
+    <p>For these three subjects, most work is likely to involve documents, presentations, research, spreadsheets, PDFs and online college systems, all of which a MacBook handles well.</p>
+    <p>So although S6C has a general preference against Apple laptops, a MacBook should be a reasonable choice for this particular subject combination.</p>
+    <p>It is still worth confirming whether the student's account includes a Microsoft 365 desktop licence, because the college currently emphasises Google Workspace rather than Microsoft Office.</p>
+  </section>
+
+  <section id="answer4" class="answer">
+    <h2>Microsoft 365 Installation Steps</h2>
+    <ol>
+      <li>On the MacBook, open Safari and go to <strong>m365.cloud.microsoft/apps</strong>.</li>
+      <li>Click <strong>Sign in</strong>.</li>
+      <li>Sign in using the student's <strong>Salisbury 6th Form College email address and password</strong>, rather than a personal Microsoft account.</li>
+      <li>Once signed in, look for <strong>Install apps</strong>.</li>
+      <li>Select <strong>Microsoft 365 apps</strong>.</li>
+      <li>The Microsoft 365 installer package should download to the Mac.</li>
+      <li>Open the downloaded <strong>.pkg</strong> installer and follow the on-screen instructions.</li>
+      <li>When installation is complete, open <strong>Word</strong> or <strong>Excel</strong> from the Applications folder.</li>
+      <li>When prompted, sign in again with the student's college account to activate Microsoft 365.</li>
+    </ol>
+    <p><strong>If “Install apps” is not shown:</strong> the S6C student account may not include a licence for the desktop versions of Word, Excel and PowerPoint. The student can still use the college-provided Google Workspace and, depending on the Microsoft account entitlement, Microsoft web applications.</p>
+  </section>
+
+  <script>
+    function showAnswer(id) {
+      document.querySelectorAll('.answer').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
