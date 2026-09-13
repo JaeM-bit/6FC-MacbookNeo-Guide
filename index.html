@@ -227,8 +227,14 @@
 
 <script>
     function showAnswer(id) {
+      const selected = document.getElementById(id);
+      const isAlreadyOpen = selected.classList.contains('active');
+
       document.querySelectorAll('.answer').forEach(el => el.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+
+      if (!isAlreadyOpen) {
+        selected.classList.add('active');
+      }
     }
   </script>
 </body>
